@@ -5,7 +5,7 @@
 
 int k = 0;
 
-int global[1500];
+int global[3500];
 
 void
 panic (char *m)
