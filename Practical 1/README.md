@@ -9,7 +9,7 @@
 <!-- By: aperez-b <aperez-b@uoc.edu>                     +@@@@@@@* +@@+      -->
 <!--                                                       :-==:.  -@@#      -->
 <!-- Created: 2022/11/05 13:26:51 by aperez-b                       +@@@%@   -->
-<!-- Updated: 2022/11/11 20:35:24 by aperez-b                                -->
+<!-- Updated: 2022/11/11 22:17:15 by aperez-b                                -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -31,14 +31,7 @@
 
 ## Introduction
 
-This practice proposes a series of activities with the aim the student can apply on
-a Unix system some of the concepts introduced in the subject.
-The student will have to do experiments and answer the proposed questions. You
-will also need to write a short program in *C* language.
-The practice can be developed on any *UNIX* system (the *UOC* facilitates **Ubuntu
-14.04** distribution). It’s recommended that while you are doing the experiments
-there are no other users working on the system because the result of some
-experiments may depend on the system load.
+This practice proposes a series of activities with the aim the student can apply on a U system some of the concepts introduced in the subject. The student will have to do experiments and answer the proposed questions. You will also need to write a short program in *C* language. The practice can be developed on any *UNIX* system (the *UOC* facilitates **Ubuntu 14.04** distribution). It’s recommended that while you are doing the experiments there are no other users working on the system because the result of some experiments may depend on the system load.
 
 I will personally develop this practical activity from **Fedora Workstation 37** and **ArchLinux**.
 
@@ -55,6 +48,22 @@ For the following questions, some code has been provided. It is all included in 
 ## Question 1. Processes
 
 ### 1.1. Count Programs Study
+
+**Question**
+
+Once studied the behavior of `count1`, draw a graph of states with three nodes (one for each possible state of the process: **Ready**, **Run** and **Wait**) and with the arcs that reflect the state changes which can occur while a process is running `count1`.
+
+**Answer**
+
+![Graph for count1](https://user-images.githubusercontent.com/40824677/201429284-e6f1d053-f751-4629-9772-b082ee5fa743.png)
+
+**Question**
+
+Similar to 1.1.1., draw the graph showing the state changes that a process running `count2` may happen.
+
+**Answer**
+
+![Graph for count2](https://user-images.githubusercontent.com/40824677/201429282-4fc01180-c31c-459b-8437-33c52e6a1974.png)
 
 ### 1.2. Hardware Analysis
 
@@ -116,21 +125,25 @@ Screenshot of outputs from `1` to `2N` (`N` being the number of processors on my
 
 ![./stack 1](https://user-images.githubusercontent.com/40824677/201409561-3600dfbf-76a5-4f2b-9bba-7aeb9337a43b.png)
 ![./stack 2](https://user-images.githubusercontent.com/40824677/201409558-6d6fc2bc-418f-4ed6-a6ad-115f6871d06f.png)
+
 ![./stack 3](https://user-images.githubusercontent.com/40824677/201409554-38101436-f36b-41ee-9af6-d7067e5bf2cb.png)
 ![./stack 4](https://user-images.githubusercontent.com/40824677/201409550-d62ca280-af5a-4765-9bb5-16ce18e43be7.png)
 
 ![./stack 5](https://user-images.githubusercontent.com/40824677/201409547-94cc32e1-19e9-4c2d-a010-f7cb5b1c392e.png)
 ![./stack 6](https://user-images.githubusercontent.com/40824677/201409546-5a63a517-6ce4-42e5-9b11-a6906199d65a.png)
+
 ![./stack 7](https://user-images.githubusercontent.com/40824677/201409540-06dc06fc-4908-4572-aa04-08cc7222f7f1.png)
 ![./stack 8](https://user-images.githubusercontent.com/40824677/201409538-afcef3c4-a0ed-4acb-9c5a-116134d857a0.png)
 
 ![./stack 9](https://user-images.githubusercontent.com/40824677/201409534-96c3c111-a4f3-4b8c-a42e-8c35ad01a52a.png)
 ![./stack 10](https://user-images.githubusercontent.com/40824677/201409532-d4f7cef8-257b-4c0c-b8dc-eea43c6bc7c2.png)
+
 ![./stack 11](https://user-images.githubusercontent.com/40824677/201409530-9e2978a5-27c6-4309-90ce-b06a21d8f4fe.png)
 ![./stack 12](https://user-images.githubusercontent.com/40824677/201409528-9160c8a7-1275-4351-854d-e9f6accb0dfe.png)
 
 ![./stack 13](https://user-images.githubusercontent.com/40824677/201409525-c1983831-950d-404d-83e7-198b69a9fa40.png)
 ![./stack 14](https://user-images.githubusercontent.com/40824677/201409523-79e3692d-c6b0-499a-ad0f-a7900b1452c7.png)
+
 ![./stack 15](https://user-images.githubusercontent.com/40824677/201409518-504f6cbb-f0b7-4e08-923c-a969a6e7f8ed.png)
 ![./stack 16](https://user-images.githubusercontent.com/40824677/201409512-4a021aab-65e4-400d-bed0-c6abc4aff90b.png)
 
@@ -229,10 +242,16 @@ To run the code, you can simply run the following command:
 Here are some screenshots proving it works:
 
 ![mem3 executable example](https://user-images.githubusercontent.com/40824677/200535430-85c0091e-a083-44ea-a4eb-2893ba2e7224.png)
+
 ![mem3 executable example](https://user-images.githubusercontent.com/40824677/200534463-1a9b951d-dfb7-4acf-b8d6-a864144c6a9e.png)
+
 ![mem3 executable example](https://user-images.githubusercontent.com/40824677/200534449-a7b82095-3756-433a-891b-8436bea4bcc6.png)
 
 *Note how this third example is run with **valgrind**, a tool that helps check for code errors and leaks. No errors are reported, so we assume that there are **no memory leaks**.*
+
+As an added bonus, the code I created passes the so-called [`norminette`](https://github.com/42School/norminette), a linter for `.c` and `.h` files I use to keep code clean.
+
+![norminette passed](https://user-images.githubusercontent.com/40824677/201417740-896d222c-e111-4d92-997e-10e00db2622a.png)
 
 ## Question 3. In and Out
 
