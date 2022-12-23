@@ -9,7 +9,7 @@
 /*   By: aperez-b <aperez-b@uoc.edu>                     +@@@@@@@* +@@+       */
 /*                                                         :-==:.  -@@#       */
 /*   Created: 2022/12/23 16:44:33 by aperez-b                       +@@@%@    */
-/*   Updated: 2022/12/23 17:18:09 by aperez-b                                 */
+/*   Updated: 2022/12/23 19:56:31 by aperez-b                                 */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,11 @@ int	main(int argc, char **argv)
 	while (1)
 	{
 		pid = fork();
+		if (pid == -1)
+		{
+			fprintf(stderr, "Fork failed\n");
+			exit(1);
+		}
 		if (!pid)
 		{
 			system("date");
