@@ -1,17 +1,20 @@
----
-title: Practical 2
-author: Alejandro Pérez Bueno
-date: December 23rd, 2022
-geometry: margin=2cm
-author: Author Name
-header-includes: |
-    \usepackage{fancyhdr}
-    \pagestyle{fancy}
-    \fancyhead[CO,CE]{aperez-b@uoc.edu}
-    \fancyhead[RO,RE]{UOC}
----
+<!-- *********************************************************************** -->
+<!--                                                                         -->
+<!--                                         =@@*   +@@+                     -->
+<!--                                         =@@*   +@@+ :*%@@@%*:           -->
+<!--                                         =@@*   =@@+.@@@=--%@@-          -->
+<!--                                         :@@%. .#@@--@@*   +@@* .+%@@@   -->
+<!-- README.md                                =%@@@@@@+ =@@*   =@@+.@@@+-=   -->
+<!--                                            .---:   -@@#.  *@@--@@*      -->
+<!-- By: aperez-b <aperez-b@uoc.edu>                     +@@@@@@@* +@@+      -->
+<!--                                                       :-==:.  -@@#      -->
+<!-- Created: 2022/12/23 20:00:43 by aperez-b                       +@@@%@   -->
+<!-- Updated: 2022/12/23 20:01:07 by aperez-b                                -->
+<!--                                                                         -->
+<!-- *********************************************************************** -->
 
-\newpage
+# Practical 2
+
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -67,7 +70,6 @@ Refer to the manual page (man order) for `exit` and `_exit`.
 Attach the first few lines of the result. How to know who is called and who is called by a
 library routine?
 
-\newpage
 #### Answer 2 a)
 
 Here are the first lines of the output of the command `man exit`:
@@ -116,7 +118,6 @@ executions. Explain the behaviour of this program.
 
 #### Answer 2 c)
 
-\newpage
 ![Sample Executions](https://user-images.githubusercontent.com/40824677/209373883-1f2ce9ac-c566-4e6e-b525-328e29d469ec.png)
 
 From the behavior we can clearly see how `exit` and `_exit` differ. Every case in the `switch`
@@ -138,7 +139,6 @@ consequences this may have when you do a printf*
 
 #### Answer 2 d)
 
-\newpage
 ![Sample Executions](https://user-images.githubusercontent.com/40824677/209375612-962c0422-e57e-4ea6-8181-81e949cf791b.png)
 
 In the first three cases (`exitwe`, `exitw_` and `exitpe`) the output is the expected one. However,
@@ -266,3 +266,5 @@ will never be printed on the screen.
 
 This second practical activity was nice. Even though I had some background knowledge on processes,
 there were still various details I completely ignored.
+
+December 23rd, 2022
